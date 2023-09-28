@@ -59,11 +59,11 @@ func New(config Config) fiber.Handler {
 		if token != nil {
 
 			// Set authenticated user data into local context
-			c.Locals(cfg.ContextKey, User{
-				Email:         token.Claims["email"].(string),
-				EmailVerified: token.Claims["email_verified"].(bool),
-				UserID:        token.Claims["user_id"].(string),
-			})
+			//c.Locals(cfg.ContextKey, User{
+			//	Email:         token.Claims["email"].(string),
+			//	EmailVerified: token.Claims["email_verified"].(bool),
+			//	UserID:        token.Claims["user_id"].(string),
+			//})
 
 			return cfg.SuccessHandler(c)
 		}
